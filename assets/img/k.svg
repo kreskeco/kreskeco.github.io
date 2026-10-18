@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="K">
+  <title>K</title>
+  <!--
+    Monogram avatar: letter K drawn as pure geometry, so it carries no font
+    dependency and cannot shift shape through font fallback.
+
+    Palette is pure black and white only: #000000 and #FFFFFF.
+
+    The white ring is doing real work, not decoration. An SVG loaded through an
+    img tag cannot read page CSS, so one file cannot switch appearance per theme.
+    The ring resolves that without a template override:
+      on a white page  the ring is invisible, leaving a clean black disc;
+      on a dark page   the black disc would merge into the background, and the
+      ring is what keeps the circular form readable;
+      over a photo     the ring separates the disc from the image
+      (the homepage uses the background layout, so the avatar sits on a photo).
+
+    Glyph bounding box: x 29..70, y 20..80, optically centred on 50,50. Its
+    furthest point is about r=36 from centre, well inside the ring inner edge at
+    r=43, so the ring never crowds the glyph. Arm left edges sit at x=31, buried
+    inside the stem (30..39), so the crotch stays filled with no hairline notch.
+  -->
+  <circle cx="50" cy="50" r="46" fill="#000000" stroke="#FFFFFF" stroke-width="6"/>
+  <g fill="#FFFFFF" shape-rendering="geometricPrecision">
+    <!-- stem -->
+    <path d="M30 20h9v60h-9z"/>
+    <!-- upper arm -->
+    <path d="M31 45 70 21v9L31 54z"/>
+    <!-- lower arm -->
+    <path d="M31 46 70 70v9L31 55z"/>
+  </g>
+</svg>
